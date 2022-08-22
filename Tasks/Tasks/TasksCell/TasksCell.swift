@@ -16,5 +16,11 @@ class TasksCell: UITableViewCell {
         super.awakeFromNib()
     }
 
+    func configureCell(with task: Task) {
+        self.taskName.text = task.nameTask
+        if task.oepn().count > 0 {
+            self.subtaskCount.text = String(task.oepn().count)
+        }
+    }
     
 }
