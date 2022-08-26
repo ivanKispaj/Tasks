@@ -8,6 +8,7 @@
 import Foundation
 
 protocol Task {
-    var nameTask: String { get }
-    func oepn() -> [Task]
+    var task: String {get set}
+    func open() -> [Task]
+    func addFolder(_ task: [Task])
 }

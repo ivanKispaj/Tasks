@@ -17,9 +17,11 @@ class TasksCell: UITableViewCell {
     }
 
     func configureCell(with task: Task) {
-        self.taskName.text = task.nameTask
-        if task.oepn().count > 0 {
-            self.subtaskCount.text = String(task.oepn().count)
+        self.taskName.text = task.task
+        if task.open().count > 0 {
+            self.subtaskCount.text = String(task.open().count)
+        } else {
+            self.subtaskCount.text = ""
         }
     }
     
