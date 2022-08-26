@@ -22,6 +22,21 @@ class MainSceneViewController: UIViewController , TaskDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+ //MARK: - parse 3 json object --------------------
+        let parseResult = ParseJsonResult()
+        let parseData = ParseJsonData()
+        let parseJson = ParseJson()
+        parseResult.nextParsers = parseData
+        parseData.nextParsers = parseJson
+        for number in 1...3 {
+            let data = OpenJson().data(from: String(number))
+            parseResult.parseJson(data)
+
+        }
+        
+//MARK: -----------------------------
+        
         tableView.delegate = self
         tableView.dataSource = self
         navigationBar.title = AppData.mainScreenName.rawValue

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 enum AppData: String {
     case mainScreenName = "Задачи"
@@ -15,3 +16,14 @@ enum AppData: String {
     case allertActionName = "Сохранить"
     case storyboardName = "Main"
 }
+
+
+
+
+
+
+
+
+
+
+
